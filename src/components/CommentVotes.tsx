@@ -15,10 +15,8 @@ import { FC, useEffect, useState } from "react";
 interface CommentVotesProps {
   commentId: string;
   initialVotesAmt: number;
-  initialVote?: PartialVote;
+  initialVote?: Pick<CommentVote, "type">;
 }
-
-type PartialVote = Pick<CommentVote, "type">;
 
 const CommentVotes: FC<CommentVotesProps> = ({
   commentId,
